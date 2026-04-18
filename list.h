@@ -6,8 +6,9 @@ struct Node{
 	struct Node* next;
 };
 
-struct Node* insertAtBeginning(struct Node* head; int reading);
+struct Node* insertAtBeginning(struct Node* head, int reading);
 
 void printList(struct Node *head);
 
+struct Node* insertAtEnd(struct Node* head, int reading);
 #endif
