@@ -10,6 +10,8 @@ struct Node* insertAtBeginning(struct Node* head, int reading);
 
 struct Node* insertAtPosition(struct Node* head, int reading, int pos);
 
+struct Node* deleteAtPosition(struct Node* head, int pos);
+
 void printList(struct Node *head);
 
 struct Node* insertAtEnd(struct Node* head, int reading);

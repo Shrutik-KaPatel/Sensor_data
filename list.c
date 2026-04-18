@@ -46,7 +46,6 @@ struct Node* insertAtPosition(struct Node* head, int reading, int pos)
 	{
 		newNode->next = head;
 		return newNode;
-
 	}
 
 	struct Node* temp = head;
@@ -63,6 +62,29 @@ struct Node* insertAtPosition(struct Node* head, int reading, int pos)
 }
 
 
+struct Node* deleteAtPosition(struct Node* head, int pos)
+{
+	if(pos == 0)
+	{
+		struct Node* temp = head;
+    		head = head->next;
+   	 	free(temp);
+    		return head;
+	}
+
+	struct Node* temp = head;
+	
+	for(int i = 0; i < pos-1; i++)
+	{
+		temp = temp->next;
+	}
+	
+	struct Node* toDelete = temp->next;
+	temp->next = toDelete->next;
+	free(toDelete);
+	toDelete = NULL;
+	return head;
+}
 void printList(struct Node *head)
 {
 	for(struct Node* temp = head; temp != NULL; temp = temp->next)

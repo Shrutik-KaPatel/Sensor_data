@@ -10,6 +10,8 @@ int main()
 	head = insertAtEnd(head, 40);
 	head = insertAtPosition(head, 25, 2);
 	printList(head);
+	head = deleteAtPosition(head, 2);
+	printList(head);
 	
 	return 0;
 }
